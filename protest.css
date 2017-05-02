@@ -1,0 +1,69 @@
+.item {
+    display: none;
+}
+
+.item.active {
+	display: block;
+   width:50%;
+}
+
+.item img{
+	width: 100%;
+}
+
+
+.buttons{
+	text-align: center;
+	padding-bottom: 1%;
+	padding-top: .5%;
+}
+
+button {
+	color:white;
+	font-style: bold;
+	font-size: 1em;
+	height:5%;
+	padding-top:.5%;
+}
+
+/* For Flip*/
+
+.item .front, .item .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    transition: .5s transform ease-in-out;
+    backface-visibility: hidden;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    
+    border-style: solid;
+    box-sizing: border-box;
+    background-color: #e8eaed;
+}
+
+.item .back {
+    transform: rotateY(-180deg);
+}
+
+.item {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-bottom: 60%;
+}
+
+.item.active {
+    transform: rotateY(180deg) scaleX(-1);
+}
+
+.item.active .front {
+    transform: rotateY(-180deg);
+}
+
+.item.active .back {
+    transform: rotateY(0deg);
+}
